@@ -1,4 +1,4 @@
-interface Props {
+/* interface Props {
     name: string; 
     age: number;
 }
@@ -23,7 +23,7 @@ class Test implements ITest {
 
 const toto: ITest | Test = new Test({name: "hello", age: 23})
 
-toto.salutation()
+toto.salutation() */
 
 interface IUser {
     firstName: string;
@@ -101,6 +101,7 @@ interface IProgression {
     user: User;
     level: Level;
     skill: Skill;
+    created_at: Date;
 }
 
 type ProgressionProps = {
