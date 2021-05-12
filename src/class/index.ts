@@ -25,7 +25,7 @@ const toto: ITest | Test = new Test({name: "hello", age: 23})
 
 toto.salutation() */
 
-interface IUser {
+/* interface IUser {
     firstName: string;
     lastName: string;
 }
@@ -42,9 +42,9 @@ class User implements IUser {
         this.firstName = props.firstName;
         this.lastName = props.lastName
     }
-}
+} */
 
-interface ILevel {
+/* interface ILevel {
     value: number;
 }
 
@@ -57,9 +57,9 @@ class Level implements ILevel {
     constructor(props: LevelProps) {
         this.value = props.value;
     }
-}
+} */
 
-interface ICategory {
+/* interface ICategory {
     name: string;
 }
 
@@ -72,9 +72,9 @@ class Category implements ICategory {
     constructor(props: CategoryProps) {
         this.name = props.name;
     }
-}
+} */
 
-interface ISkill {
+/* interface ISkill {
     name: string;
     description: string;
     category: Category;
@@ -95,9 +95,9 @@ class Skill implements ISkill {
         this.description = props.description;
         this.category = props.category;
     }
-}
+} */
 
-interface IProgression {
+/* interface IProgression {
     user: User;
     level: Level;
     skill: Skill;
@@ -121,5 +121,5 @@ class Progression implements IProgression {
         this.skill = props.skill;
         this.created_at = new Date(Date.now());
     }
-}
+} */
 
