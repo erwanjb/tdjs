@@ -4,7 +4,7 @@ import {User} from '../entities/User';
 import {Category} from '../entities/Category';
 import {Level} from '../entities/Level';
 import {Skill} from '../entities/Skill';
-import {Progresssion} from '../entities/Progression';
+import {Progression} from '../entities/Progression';
 
 export const startConnexion = async () => {
     createConnection({
@@ -14,7 +14,7 @@ export const startConnexion = async () => {
         username: USERNAME_DB,
         password: PASSWORD_DB,
         database: NAME_DB,
-        entities: [User, Category, Level, Skill, Progresssion],
+        entities: [User, Category, Level, Skill, Progression],
         synchronize: true,
         logging: !IS_PROD ? true: false
     }).then(connection => {

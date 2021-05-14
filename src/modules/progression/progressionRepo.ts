@@ -1,7 +1,7 @@
-import { Progresssion } from '../../entities/Progression'
+import { Progression } from '../../entities/Progression'
 import {EntityRepository, Repository} from 'typeorm';
 
-@EntityRepository(Progresssion)
-export default class ProgressionRepo extends Repository<Progresssion> {
+@EntityRepository(Progression)
+export default class ProgressionRepo extends Repository<Progression> {
     
 }

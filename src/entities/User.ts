@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany, BaseEntity } from "typeorm";
-import {Progresssion} from './Progression';
+import {Progression} from './Progression';
 
 @Entity()
 export class User extends BaseEntity {
@@ -12,6 +12,6 @@ export class User extends BaseEntity {
     @Column()
     lastName: string;
 
-    @OneToMany(_type => Progresssion, progression => progression.user) // note: we will create author property in the Photo class below
-    progressions: Progresssion[];
+    @OneToMany(_type => Progression, progression => progression.user) // note: we will create author property in the Photo class below
+    progressions: Progression[];
 }
