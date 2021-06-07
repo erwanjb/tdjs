@@ -16,11 +16,11 @@ export class CreateProgressionController {
 
     public async create(req: Request, res: Response) {
         let response: string;
-        const user = req.body.user;
+        const student = req.body.student;
         const skill = req.body.skill;
         const level = req.body.level;
-        if (req.body && user && skill && level) {
-            await this.createProgression.createProgression(user, skill, level);
+        if (req.body && student && skill && level) {
+            await this.createProgression.createProgression(student, skill, level);
             response = "progression create"
         } else {
             response = "Not created"

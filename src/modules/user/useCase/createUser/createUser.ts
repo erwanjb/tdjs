@@ -11,7 +11,7 @@ export class CreateUser {
         return await this.userRepo.find();
     }
 
-    public async createUser(firstName: string, lastName: string) {
-        return await this.userRepo.insert({firstName, lastName});
+    public async createUser(email: string, password: string, isAdmin: boolean) {
+        return await this.userRepo.insert({email, password, isAdmin});
     }
 }

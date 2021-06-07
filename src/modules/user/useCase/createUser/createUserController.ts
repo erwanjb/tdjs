@@ -16,10 +16,11 @@ export class CreateUserController {
 
     public async create(req: Request, res: Response) {
         let response: string;
-        const firstName = req.body.firstName;
-        const lastName = req.body.lastName;
-        if (req.body && firstName && lastName) {
-            await this.createUser.createUser(firstName, lastName);
+        const email = req.body.email;
+        const password = req.body.password;
+        const isAdmin = req.body.isAdmin;
+        if (req.body && email && password) {
+            await this.createUser.createUser(email, password, isAdmin);
             response = "user create"
         } else {
             response = "Not created"

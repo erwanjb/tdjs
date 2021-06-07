@@ -14,7 +14,7 @@ export class CreateProgression {
         return await this.progressionRepo.find();
     }
 
-    public async createProgression(user: User, skill: Skill, level: Level) {
-        return await this.progressionRepo.insert({user, skill, level, created_at: new Date(Date.now())});
+    public async createProgression(student: User, skill: Skill, level: Level) {
+        return await this.progressionRepo.insert({student, skill, level, created_at: new Date(Date.now())});
     }
 }

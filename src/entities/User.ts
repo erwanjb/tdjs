@@ -1,5 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany, BaseEntity } from "typeorm";
-import {Progression} from './Progression';
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne, BaseEntity } from "typeorm";
+import {Student} from './Student';
 
 @Entity()
 export class User extends BaseEntity {
@@ -7,11 +7,17 @@ export class User extends BaseEntity {
     id: string;
 
     @Column()
-    firstName: string;
+    email: string;
 
     @Column()
-    lastName: string;
+    password: string;
 
-    @OneToMany(_type => Progression, progression => progression.user) // note: we will create author property in the Photo class below
-    progressions: Progression[];
+    @Column()
+    isAdmin: boolean;
+
+    @Column({nullable: true})
+    lastLogin: Date;
+
+    @OneToOne(_type => Student, student => student.user)
+    student: Student
 }

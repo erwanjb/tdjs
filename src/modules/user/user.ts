@@ -1,18 +1,25 @@
 interface IUser {
-    firstName: string;
-    lastName: string;
+    email: string;
+    password: string;
+    isAdmin: boolean;
+    lastLogin: Date | null
 }
 
 type UserProps = {
-    firstName: string;
-    lastName: string;
+    email: string;
+    password: string;
+    isAdmin: boolean;
 }
 
 export default class User implements IUser {
-    public firstName: string;
-    public lastName: string;
+    public email: string;
+    public password: string;
+    public isAdmin: boolean;
+    public lastLogin: Date | null
     constructor(props: UserProps) {
-        this.firstName = props.firstName;
-        this.lastName = props.lastName
+        this.email = props.email;
+        this.password = props.password;
+        this.isAdmin = props.isAdmin;
+        this.lastLogin = null;
     }
 }

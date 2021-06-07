@@ -1,13 +1,13 @@
 import { Entity, Column, ManyToOne, BaseEntity, JoinColumn, PrimaryColumn } from "typeorm";
-import {User} from "./User";
+import {Student} from "./Student";
 import {Level} from "./Level";
 import {Skill} from "./Skill";
 
 @Entity()
 export class Progression extends BaseEntity {
 
-    @PrimaryColumn('uuid', { name: 'user_id'})
-    userId: number;
+    @PrimaryColumn('uuid', { name: 'student_id'})
+    studentId: number;
     
     @PrimaryColumn('uuid', { name: 'level_id'})
     levelId: number;
@@ -15,9 +15,9 @@ export class Progression extends BaseEntity {
     @PrimaryColumn('uuid', { name: 'skill_id'})
     skillId: number;
 
-    @ManyToOne(_type => User,  user => user.progressions)
-    @JoinColumn({ name: 'user_id' })
-    user: User;
+    @ManyToOne(_type => Student,  student => student.progressions)
+    @JoinColumn({ name: 'student_id' })
+    student: Student;
 
     @ManyToOne(_type => Level,  level => level.progressions)
     @JoinColumn({ name: 'level_id' })

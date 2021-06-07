@@ -7,8 +7,8 @@ import {getCustomRepository} from "typeorm";
 //Je construit mon repo avec les entités dont j'ai besoin
 
 export const createUser = () => {
-    const skillRepo =  getCustomRepository(UserRepo);
-    return new CreateUser(skillRepo)
+    const userRepo =  getCustomRepository(UserRepo);
+    return new CreateUser(userRepo)
 }
 
 export const createUserController = () => {
